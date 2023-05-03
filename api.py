@@ -10,7 +10,6 @@ df.to_csv('data.csv', index=False)
 
 # upload file to bucket
 client = boto3.client('s3')
-client.create_bucket(Bucket='lab', location='ap-northeast-1', CreateBucketConfiguration={'LocationConstraint': 'ap-northeast-1'})
-client.upload_file('data.csv', 'lab', 'data.csv', location='ap-northeast-1')
+client.upload_file('data.csv', 'lab4-ipt-kpi-s3-bucket', 'data.csv')
 
 
